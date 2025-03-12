@@ -15,7 +15,7 @@ public class Collectibles : MonoBehaviour
     // Update is called once per frame
     internal void Interaction(GameObject parentObject)
     {
-        Debug.Log("Player got an " + objectName);
+        //Debug.Log("Player got an " + objectName);
 
         gameObject.transform.parent = parentObject.transform;
         gameObject.transform.localPosition = Vector3.zero;

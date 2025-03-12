@@ -304,11 +304,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   objectNear: []
-  objectOwned:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   objectOwnedLen: 4
 --- !u!58 &220589272
 CircleCollider2D:
@@ -1643,7 +1638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemArray: {fileID: 1049603275}
-  itemArrayWhenEmpty: {fileID: 0}
+  itemArrayWhenEmpty: {fileID: 21300000, guid: ae172ed918898604eb72150f450224c0, type: 3}
 --- !u!1 &1348258969
 GameObject:
   m_ObjectHideFlags: 0

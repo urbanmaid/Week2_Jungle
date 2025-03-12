@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -7,27 +8,34 @@ public class PlayerController : MonoBehaviour
 
     // Control
     private float inputX, inputY;
-    private bool isCollect, isInAction;
+    private bool isCollect, isInAction, isDrop;
 
     [Header("Player Specifications")]
     [SerializeField] float moveSpeed = 4f;
+    private readonly float actionDelayDuration = 0.4f;
+
     [SerializeField] List<GameObject> objectNear;
-    [SerializeField] GameObject[] objectOwned = new GameObject[4]; //Item owning limits are 4
+    private int objectOwnedOffset;
     [SerializeField] int objectOwnedLen = 4;
+
     //private GameManager gm;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //GameManager.instance.player = this;
+        objectOwnedOffset = gameObject.transform.childCount;
     }
 
     internal void DoPlayerAction()
     {
+        // Get input
         GetInput();
 
+        // Do Action
         Move();
         Collect();
+        Drop();
     }
 
     internal void GetInput()
@@ -35,8 +43,9 @@ public class PlayerController : MonoBehaviour
         inputX = Input.GetAxis("Horizontal");
         inputY = Input.GetAxis("Vertical");
 
-        isCollect = Input.GetButton("Collect");
-        isInAction = Input.GetButton("Action");
+        isCollect = Input.GetButtonDown("Collect");
+        isInAction = Input.GetButtonDown("Action");
+        isDrop = Input.GetButtonDown("Drop");
     }
 
     void Move()
@@ -74,6 +83,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Drop()
+    {
+        if(isDrop && (objectOwnedOffset < transform.childCount))
+        {
+            Debug.Log(transform.GetChild(transform.childCount - 1) + "Will be dropped");
+            transform.GetChild(transform.childCount - 1).SetParent(null);
+
+            GameManager.instance.UpdateItemList();
+        }
+    }
+
     // Item collection trigger
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -82,7 +102,7 @@ public class PlayerController : MonoBehaviour
             if(collision.CompareTag("Collectible"))
             {
                 objectNear.Add(collision.gameObject);
-                Debug.Log("Object near to player: " + objectNear.Count + ", Object touched: " + collision.GetComponent<Collectibles>().objectName);
+                //Debug.Log("Object near to player: " + objectNear.Count + ", Object touched: " + collision.GetComponent<Collectibles>().objectName);
                 //collision.GetComponent<Collectibles>().Interaction();
             }
         }
@@ -93,7 +113,7 @@ public class PlayerController : MonoBehaviour
         if(collision.CompareTag("Collectible"))
         {
             objectNear.Remove(collision.gameObject);
-            Debug.Log("Object near to player: " + objectNear.Count);
+            //Debug.Log("Object near to player: " + objectNear.Count);
         }
     }
 }

@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
     {
         int collectibleCount = GameManager.instance.player.transform.childCount;
         int collectibleArrayCount = itemArray.transform.childCount;
-        //Debug.Log("collectibleCount: " + collectibleCount + ", collectibleArrayCount: " + collectibleArrayCount);
+        Debug.Log("collectibleCount: " + collectibleCount + ", collectibleArrayCount: " + collectibleArrayCount);
         for(int i = 1; i < collectibleCount; i++)
         {
             if(collectibleCount <= collectibleArrayCount)
@@ -34,6 +34,10 @@ public class UIManager : MonoBehaviour
             {
                 Debug.LogWarning("There is no space for showing collectibles!");
             }
+        }
+        for(int j = collectibleCount; j < collectibleArrayCount; j++)
+        {
+            itemArray.transform.GetChild(j).GetComponent<Image>().sprite = itemArrayWhenEmpty;
         }
     }
 }
