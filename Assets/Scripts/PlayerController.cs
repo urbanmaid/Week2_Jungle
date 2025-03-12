@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
                     Debug.LogWarning("Player have reached the limits of owning objects");
                 }
                 else{
-                    objectNear[0].GetComponent<Collectibles>().Interaction(gameObject);
+                    objectNear[0].GetComponent<Collectibles>().BePickUp(gameObject);
                     objectNear.RemoveAt(0);
                 }
             }
@@ -87,7 +87,11 @@ public class PlayerController : MonoBehaviour
     {
         if(isDrop && (objectOwnedOffset < transform.childCount))
         {
-            Debug.Log(transform.GetChild(transform.childCount - 1) + "Will be dropped");
+            // Set collectible which will be dropped
+            Transform collectibleTarget = transform.GetChild(transform.childCount - 1);
+            Debug.Log(collectibleTarget + "Will be dropped");
+
+            collectibleTarget.GetComponent<Collectibles>().BeDrop();
             transform.GetChild(transform.childCount - 1).SetParent(null);
 
             GameManager.instance.UpdateItemList();

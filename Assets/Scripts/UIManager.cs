@@ -5,6 +5,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject itemArray;
     [SerializeField] Sprite itemArrayWhenEmpty;
+    [SerializeField] Color colorWhenEmpty = Color.white;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,31 +14,56 @@ public class UIManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     internal void UpdateItemList()
     {
         int collectibleCount = GameManager.instance.player.transform.childCount;
         int collectibleArrayCount = itemArray.transform.childCount;
         Debug.Log("collectibleCount: " + collectibleCount + ", collectibleArrayCount: " + collectibleArrayCount);
+
+        // Apply sprite icon
         for(int i = 1; i < collectibleCount; i++)
         {
+            Image targetIconApplied = itemArray.transform.GetChild(i).GetComponent<Image>(); // Define where the sprite applied
+            Transform targetCollectible = GameManager.instance.player.transform.GetChild(i); // Define where the sprite refered
+
             if(collectibleCount <= collectibleArrayCount)
             {
-                itemArray.transform.GetChild(i).GetComponent<Image>().sprite
-                = GameManager.instance.player.transform.GetChild(i).GetComponent<Collectibles>().icon;
+                /*
+                if(targetCollectible.GetComponent<Collectibles>().sprite != null)  // If collectible has its thumb of item
+                {
+                    targetIconApplied.sprite = targetCollectible.GetComponent<Collectibles>().sprite;
+                }
+                */
+                //else
+                if(targetCollectible.GetComponent<SpriteRenderer>())
+                {
+                    // Changes image of icon
+                    targetIconApplied.sprite = targetCollectible.GetComponent<SpriteRenderer>().sprite;
+                    targetIconApplied.color = targetCollectible.GetComponent<SpriteRenderer>().color;
+
+                    // Changes color of icon
+                    Color savedColor = targetIconApplied.color;
+                    savedColor.a = 1f;
+                    targetIconApplied.color = savedColor;
+                }
+                else
+                {
+                    Debug.LogError("This collectible has no Sprite, add Sprite on this object");
+                }
             }
             else
             {
                 Debug.LogWarning("There is no space for showing collectibles!");
             }
         }
-        for(int j = collectibleCount; j < collectibleArrayCount; j++)
+
+        // Apply empty icon
+        for(int i = collectibleCount; i < collectibleArrayCount; i++)
         {
-            itemArray.transform.GetChild(j).GetComponent<Image>().sprite = itemArrayWhenEmpty;
+            Image targetIconApplied = itemArray.transform.GetChild(i).GetComponent<Image>();
+            targetIconApplied.sprite = itemArrayWhenEmpty;
+            targetIconApplied.color = colorWhenEmpty;
         }
     }
 }
