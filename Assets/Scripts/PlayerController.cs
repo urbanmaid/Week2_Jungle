@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Specifications")]
     [SerializeField] float moveSpeed = 4f;
-    private readonly float actionDelayDuration = 0.4f;
+    //private readonly float actionDelayDuration = 0.4f;
 
     [SerializeField] List<GameObject> objectNear;
     private int objectOwnedOffset;
@@ -73,8 +73,8 @@ public class PlayerController : MonoBehaviour
                     Debug.LogWarning("Player have reached the limits of owning objects");
                 }
                 else{
-                    objectNear[0].GetComponent<Collectibles>().BePickUp(gameObject);
-                    objectNear.RemoveAt(0);
+                    objectNear[0].GetComponent<Collectible>().BePickUp(gameObject);
+                    //objectNear.RemoveAt(0);
                 }
             }
 
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
             Transform collectibleTarget = transform.GetChild(transform.childCount - 1);
             Debug.Log(collectibleTarget + "Will be dropped");
 
-            collectibleTarget.GetComponent<Collectibles>().BeDrop();
+            collectibleTarget.GetComponent<Collectible>().BeDrop();
             transform.GetChild(transform.childCount - 1).SetParent(null);
 
             GameManager.instance.UpdateItemList();

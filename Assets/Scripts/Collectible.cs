@@ -1,10 +1,20 @@
 using UnityEngine;
 
-public class Collectibles : MonoBehaviour
+public class Collectible : MonoBehaviour
 {
-    public string objectName = "Prop";
+    public enum CollectibleType
+    {
+        Key,
+        Card,
+        Misc,
+        Unknown
+    }
+
+    public string collectibleName = "Prop";
+    [SerializeField] internal int keyCode;
+    public CollectibleType type;
     //[SerializeField] internal Sprite sprite;
-    [SerializeField] bool isOwned;
+    //[SerializeField] bool isOwned;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,7 +40,7 @@ public class Collectibles : MonoBehaviour
         }
 
         // Deactivate gameObject
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     internal void BeDrop()
@@ -43,5 +53,7 @@ public class Collectibles : MonoBehaviour
             savedColor.a = 1f;
             spriteRenderer.color = savedColor;
         }
+
+        gameObject.SetActive(true);
     }
 }
