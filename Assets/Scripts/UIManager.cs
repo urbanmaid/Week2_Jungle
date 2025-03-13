@@ -1,11 +1,22 @@
+using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    private float uiChangeDuration = 1.8f;
+
+    [Header("Collectible UI")]
     [SerializeField] GameObject itemArray;
     [SerializeField] Sprite itemArrayWhenEmpty;
     [SerializeField] Color colorWhenEmpty = Color.white;
+    
+
+    [Header("Stage Intro")]
+    [SerializeField] GameObject StageIntroUI;
+    [SerializeField] TextMeshProUGUI StageIntroIndexText, StageIntroTitleText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,8 +24,7 @@ public class UIManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-
+    // Item UI Manangement
     internal void UpdateItemList()
     {
         int collectibleCount = GameManager.instance.player.transform.childCount;
@@ -65,5 +75,21 @@ public class UIManager : MonoBehaviour
             targetIconApplied.sprite = itemArrayWhenEmpty;
             targetIconApplied.color = colorWhenEmpty;
         }
+    }
+
+    public void ShowCaption(int index, string name)
+    {
+        StageIntroUI.SetActive(true);
+        StageIntroIndexText.text = index + "";
+        StageIntroTitleText.text = name;
+
+        // Off after plenty of time
+        StartCoroutine(ShowCaptionCo());
+    }
+
+    private IEnumerator ShowCaptionCo()
+    {
+        yield return new WaitForSeconds(uiChangeDuration);
+        StageIntroUI.SetActive(false);
     }
 }
