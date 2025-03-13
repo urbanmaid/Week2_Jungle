@@ -8,13 +8,14 @@ public class PlayerController : MonoBehaviour
 
     // Control
     private float inputX, inputY;
-    private bool isCollect, isInAction, isDrop;
+    internal bool isCollect, isInteraction, isDrop;
 
     [Header("Player Specifications")]
     [SerializeField] float moveSpeed = 4f;
     //private readonly float actionDelayDuration = 0.4f;
 
     [SerializeField] List<GameObject> objectNear;
+    [SerializeField] InteractiveZone interactiveZone; // Interactive zone is only existed 1 object in runtime
     private int objectOwnedOffset;
     [SerializeField] int objectOwnedLen = 4;
 
@@ -34,7 +35,9 @@ public class PlayerController : MonoBehaviour
 
         // Do Action
         Move();
+
         Collect();
+        Interaction();
         Drop();
     }
 
@@ -44,7 +47,7 @@ public class PlayerController : MonoBehaviour
         inputY = Input.GetAxis("Vertical");
 
         isCollect = Input.GetButtonDown("Collect");
-        isInAction = Input.GetButtonDown("Action");
+        isInteraction = Input.GetButtonDown("Action");
         isDrop = Input.GetButtonDown("Drop");
     }
 
@@ -83,6 +86,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Interaction()
+    {
+        if(isInteraction && interactiveZone)
+        {
+            interactiveZone.DoInteractionCheckout();
+        }
+    }
+
     void Drop()
     {
         if(isDrop && (objectOwnedOffset < transform.childCount))
@@ -109,6 +120,10 @@ public class PlayerController : MonoBehaviour
                 //Debug.Log("Object near to player: " + objectNear.Count + ", Object touched: " + collision.GetComponent<Collectibles>().objectName);
                 //collision.GetComponent<Collectibles>().Interaction();
             }
+            else if(collision.CompareTag("Interactive"))
+            {
+                interactiveZone = collision.GetComponent<InteractiveZone>();
+            }
         }
     }
 
@@ -118,6 +133,10 @@ public class PlayerController : MonoBehaviour
         {
             objectNear.Remove(collision.gameObject);
             //Debug.Log("Object near to player: " + objectNear.Count);
+        }
+        else if(collision.CompareTag("Interactive"))
+        {
+            interactiveZone = null;
         }
     }
 }

@@ -32,4 +32,9 @@ public class GameManager : MonoBehaviour
     {
         uiManager.UpdateItemList();
     }
+
+    public void TeleportTo(GameObject target)
+    {
+        player.transform.position = target.transform.position;
+    }
 }
