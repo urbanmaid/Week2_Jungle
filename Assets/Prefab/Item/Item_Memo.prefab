@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectibleName: Key Default
+  iconSprite: {fileID: 0}
   keyCode: 0
   type: 2
   eventWhenInteraction:
@@ -186,12 +187,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 101134827466801119, guid: 969a3ea6a915d8142a9dc800e1de15f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 969a3ea6a915d8142a9dc800e1de15f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.14, y: 0.16}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

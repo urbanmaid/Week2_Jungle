@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3060230577773823075}
   - component: {fileID: 6160455958889032333}
   - component: {fileID: 938153910004039085}
-  - component: {fileID: 3338399602914686048}
+  - component: {fileID: 369630409402778388}
   m_Layer: 0
-  m_Name: Item_Ironingboard
+  m_Name: Item_Table
   m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e616a8afcf1434d80b5a01f7fc2e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectibleName: Ironing board
-  iconSprite: {fileID: 21300000, guid: e85511cf5ba56b84487369a7ae0b09b8, type: 3}
-  keyCode: 140
-  type: 3
+  collectibleName: SafeKey Default
+  iconSprite: {fileID: 21300000, guid: 1b1f6e200f7fe844cb7c4909ded3622b, type: 3}
+  keyCode: 0
+  type: 0
   eventWhenInteraction:
     m_PersistentCalls:
       m_Calls: []
@@ -125,7 +125,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e8266e67bddd6f349a926a6dd01d7b97, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9f556a300f70a845bdf83160f90c57d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,7 +136,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3338399602914686048
+--- !u!61 &369630409402778388
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,11 +174,11 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.16}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.32, y: 0.16}
+  m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0

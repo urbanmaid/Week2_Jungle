@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 61951c1d18304534e878bc9dd87d56f3
+guid: af74c718d239226479575f7e362eaf12
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3441244680371412857
-    second: item_keyboard_0
+      213: -4287421885271212873
+    second: furniture_buffet_destroyed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: item_keyboard_0
+      name: furniture_buffet_destroyed_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97f9db6edc1c1cf20800000000000000
-      internalID: 3441244680371412857
+      spriteID: 7bc7c26d2840084c0800000000000000
+      internalID: -4287421885271212873
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      item_keyboard_0: 3441244680371412857
+      furniture_buffet_destroyed_0: -4287421885271212873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 61951c1d18304534e878bc9dd87d56f3
+guid: 2b4363a555d0358429e6edcf662a6d29
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3441244680371412857
-    second: item_keyboard_0
+      213: -7835837383857682276
+    second: door_01_destroyed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: item_keyboard_0
+      name: door_01_destroyed_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97f9db6edc1c1cf20800000000000000
-      internalID: 3441244680371412857
+      spriteID: c98cf695a63814390800000000000000
+      internalID: -7835837383857682276
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      item_keyboard_0: 3441244680371412857
+      door_01_destroyed_0: -7835837383857682276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
