@@ -66,7 +66,8 @@ public class PlayerController : MonoBehaviour
         {
             if(objectNear[0] == null) // If object is null
             {
-                Debug.LogError("Index of list is not having objects");
+                //Debug.LogError("Index of list is not having objects");
+                objectNear.RemoveAt(0);
             }
             else
             {
@@ -88,9 +89,16 @@ public class PlayerController : MonoBehaviour
 
     void Interaction()
     {
-        if(isInteraction && interactiveZone)
+        if(isInteraction)
         {
-            interactiveZone.DoInteractionCheckout();
+            if(interactiveZone)
+            {
+                interactiveZone.DoInteractionCheckout();
+            }
+            else if(objectNear.Count > 0)
+            {
+                objectNear[^1].GetComponent<Collectible>().BeInteraction();
+            }
         }
     }
 
@@ -110,6 +118,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Item collection trigger
+    // Adds Item when they got into trigger
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(true)
@@ -117,8 +126,6 @@ public class PlayerController : MonoBehaviour
             if(collision.CompareTag("Collectible"))
             {
                 objectNear.Add(collision.gameObject);
-                //Debug.Log("Object near to player: " + objectNear.Count + ", Object touched: " + collision.GetComponent<Collectibles>().objectName);
-                //collision.GetComponent<Collectibles>().Interaction();
             }
             else if(collision.CompareTag("Interactive"))
             {
@@ -127,12 +134,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Removes Item when they got out of trigger
     void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.CompareTag("Collectible"))
         {
             objectNear.Remove(collision.gameObject);
-            //Debug.Log("Object near to player: " + objectNear.Count);
+            // Also reset Memo UI
+            if(collision.GetComponent<MemoToggle>())
+            {
+                GameManager.instance.ResetMemoText();
+            }
         }
         else if(collision.CompareTag("Interactive"))
         {

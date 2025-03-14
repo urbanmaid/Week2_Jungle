@@ -5,7 +5,9 @@ public class InteractiveZone : MonoBehaviour
 {
     public UnityEvent eventWhenValidInput; // Interaction only valid object is placed
     public UnityEvent eventWhenInteraction; // Interaction whatever the case
-    
+    public UnityEvent eventWhenPlayerEnter; // Interaction when player come to this area
+    public UnityEvent eventWhenPlayerExit; // Interaction when player come to this area
+
     [Header("Interaction Condition")]
     [SerializeField] bool usingRequiredValidInput = true;
     private bool isValid = false;
@@ -28,6 +30,10 @@ public class InteractiveZone : MonoBehaviour
                     if(keyCode == collectible.keyCode)
                     {
                         SetValid();
+                        if(collectible.type == Collectible.CollectibleType.Key)
+                        {
+                            Destroy(collision.gameObject);
+                        }
                     }
                 }
                 else
@@ -35,42 +41,38 @@ public class InteractiveZone : MonoBehaviour
                     if(target == collectible.collectibleName)
                     {
                         SetValid();
+                        if(collectible.type == Collectible.CollectibleType.Key)
+                        {
+                            Destroy(collision.gameObject);
+                        }
                     }
                 }
             }
         }
 
-        /*
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("Player") && (eventWhenPlayerEnter != null))
         {
-            isPlayerIn = true;
+            eventWhenPlayerEnter.Invoke();
         }
-        */
     }
-    
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player") && (eventWhenPlayerExit != null))
+        {
+            eventWhenPlayerExit.Invoke();
+        }
+    }
+
     void SetValid()
     {
         isValid = true;
         DoInteractionWhenValid();
     }
 
-    /*
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Player")) // If this interactiveZone is operated only with player interaction
-        {
-            PlayerController pc = collision.GetComponent<PlayerController>();
-            if(pc && pc.isInteraction)
-            {
-
-            }
-        }
-    }
-    */
-
     internal void DoInteractionCheckout()
     {
-        Debug.Log("Player has interaction with this object: " + gameObject);
+        //Debug.Log("Player has interaction with this object: " + gameObject);
 
         // if usingRequiredValidInput is true, isAbleToDoValidInput should be true too
         // for activating interaction
@@ -89,7 +91,7 @@ public class InteractiveZone : MonoBehaviour
 
     void DoInteractionWhenValid()
     {
-        Debug.Log("Drop Zone is able to activate Event with valid input");
+        //Debug.Log("Drop Zone is able to activate Event with valid input");
         eventWhenValidInput.Invoke();
     }
 

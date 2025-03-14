@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Collectible : MonoBehaviour
 {
@@ -6,23 +7,17 @@ public class Collectible : MonoBehaviour
     {
         Key,
         Card,
+        Memo,
         Misc,
         Unknown
     }
 
     public string collectibleName = "Prop";
+    [SerializeField] internal Sprite iconSprite;
     [SerializeField] internal int keyCode;
     public CollectibleType type;
-    //[SerializeField] internal Sprite sprite;
-    //[SerializeField] bool isOwned;
+    public UnityEvent eventWhenInteraction;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     internal void BePickUp(GameObject parentObject)
     {
         //Debug.Log("Player got an " + objectName);
@@ -55,5 +50,11 @@ public class Collectible : MonoBehaviour
         }
 
         gameObject.SetActive(true);
+    }
+
+    internal void BeInteraction()
+    {
+        Debug.Log("Interaction with Collectible has been called");
+        eventWhenInteraction.Invoke();
     }
 }

@@ -6,17 +6,20 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    private float uiChangeDuration = 1.8f;
+    private float uiChangeDuration = 2.5f;
 
     [Header("Collectible UI")]
     [SerializeField] GameObject itemArray;
     [SerializeField] Sprite itemArrayWhenEmpty;
     [SerializeField] Color colorWhenEmpty = Color.white;
-    
+
+    [Header("Messege UI")]
+    [SerializeField] GameObject memoContentBG;
+    [SerializeField] TextMeshProUGUI memoContentText;
 
     [Header("Stage Intro")]
-    [SerializeField] GameObject StageIntroUI;
-    [SerializeField] TextMeshProUGUI StageIntroIndexText, StageIntroTitleText;
+    [SerializeField] GameObject stageIntroBG;
+    [SerializeField] TextMeshProUGUI stageIntroIndexText, stageIntroTitleText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +32,7 @@ public class UIManager : MonoBehaviour
     {
         int collectibleCount = GameManager.instance.player.transform.childCount;
         int collectibleArrayCount = itemArray.transform.childCount;
-        Debug.Log("collectibleCount: " + collectibleCount + ", collectibleArrayCount: " + collectibleArrayCount);
+        //Debug.Log("collectibleCount: " + collectibleCount + ", collectibleArrayCount: " + collectibleArrayCount);
 
         // Apply sprite icon
         for(int i = 1; i < collectibleCount; i++)
@@ -39,17 +42,18 @@ public class UIManager : MonoBehaviour
 
             if(collectibleCount <= collectibleArrayCount)
             {
-                /*
-                if(targetCollectible.GetComponent<Collectibles>().sprite != null)  // If collectible has its thumb of item
-                {
-                    targetIconApplied.sprite = targetCollectible.GetComponent<Collectibles>().sprite;
-                }
-                */
-                //else
                 if(targetCollectible.GetComponent<SpriteRenderer>())
                 {
                     // Changes image of icon
-                    targetIconApplied.sprite = targetCollectible.GetComponent<SpriteRenderer>().sprite;
+                    if(targetCollectible.GetComponent<Collectible>().iconSprite)  // If collectible has its thumb of item
+                    {
+                        Debug.Log("UI has got its icon from iconSprite");
+                        targetIconApplied.sprite = targetCollectible.GetComponent<Collectible>().iconSprite;
+                    }
+                    else
+                    {
+                        targetIconApplied.sprite = targetCollectible.GetComponent<SpriteRenderer>().sprite;
+                    }
                     targetIconApplied.color = targetCollectible.GetComponent<SpriteRenderer>().color;
 
                     // Changes color of icon
@@ -59,7 +63,7 @@ public class UIManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogError("This collectible has no Sprite, add Sprite on this object");
+                    Debug.LogError("This collectible has no Sprite Renderer, add Sprite on this object");
                 }
             }
             else
@@ -77,11 +81,12 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    /*
     public void ShowCaption(int index, string name)
     {
-        StageIntroUI.SetActive(true);
-        StageIntroIndexText.text = index + "";
-        StageIntroTitleText.text = name;
+        stageIntroBG.SetActive(true);
+        stageIntroIndexText.text = index + "";
+        stageIntroTitleText.text = name;
 
         // Off after plenty of time
         StartCoroutine(ShowCaptionCo());
@@ -90,6 +95,32 @@ public class UIManager : MonoBehaviour
     private IEnumerator ShowCaptionCo()
     {
         yield return new WaitForSeconds(uiChangeDuration);
-        StageIntroUI.SetActive(false);
+        stageIntroBG.SetActive(false);
+    }
+    */
+
+    internal void ShowMemoText(string contentString)
+    {
+        memoContentBG.SetActive(true);
+        memoContentText.text = contentString;
+    }
+
+    internal void ShowMemoTextAsIntro(int index, string title)
+    {
+        memoContentBG.SetActive(true);
+        memoContentText.text = index + "-" + title;
+        StartCoroutine(ResetMemoTextAuto());
+    }
+
+    internal IEnumerator ResetMemoTextAuto()
+    {
+        yield return new WaitForSeconds(uiChangeDuration);
+        ResetMemoText();
+    }
+
+    internal void ResetMemoText()
+    {
+        memoContentBG.SetActive(false);
+        memoContentText.text = "";
     }
 }
