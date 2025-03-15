@@ -30,15 +30,18 @@ public class PlayerController : MonoBehaviour
 
     internal void DoPlayerAction()
     {
-        // Get input
-        GetInput();
+        if(GameManager.instance.playStatus != 0)
+        {
+            // Get input
+            GetInput();
 
-        // Do Action
-        Move();
+            // Do Action
+            Move();
 
-        Collect();
-        Interaction();
-        Drop();
+            Collect();
+            Interaction();
+            Drop();
+        }
     }
 
     internal void GetInput()
@@ -108,7 +111,7 @@ public class PlayerController : MonoBehaviour
         {
             // Set collectible which will be dropped
             Transform collectibleTarget = transform.GetChild(transform.childCount - 1);
-            Debug.Log(collectibleTarget + "Will be dropped");
+            //Debug.Log(collectibleTarget + "Will be dropped");
 
             collectibleTarget.GetComponent<Collectible>().BeDrop();
             transform.GetChild(transform.childCount - 1).SetParent(null);

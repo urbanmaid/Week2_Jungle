@@ -8,24 +8,34 @@ public class UIManager : MonoBehaviour
 {
     private float uiChangeDuration = 2.5f;
 
-    [Header("Collectible UI")]
+    [Header("Ingame UI")]
+    [SerializeField] GameObject remainedTimeUI;
+    [SerializeField] TextMeshProUGUI remainedTimeText;
+
+    [Header("> Collectible")]
     [SerializeField] GameObject itemArray;
     [SerializeField] Sprite itemArrayWhenEmpty;
     [SerializeField] Color colorWhenEmpty = Color.white;
 
-    [Header("Messege UI")]
+    [Header("> Messege")]
     [SerializeField] GameObject memoContentBG;
     [SerializeField] TextMeshProUGUI memoContentText;
+    
+    [Header("> Explosive FX")]
+    [SerializeField] GameObject explosiveFxBg;
 
-    [Header("Stage Intro")]
-    [SerializeField] GameObject stageIntroBG;
-    [SerializeField] TextMeshProUGUI stageIntroIndexText, stageIntroTitleText;
+    [Header("Game Over")]
+    [SerializeField] GameObject gameOverBG;
+    [SerializeField] TextMeshProUGUI gameOverTitleText;
+    [SerializeField] TextMeshProUGUI gameOverDescText;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header("Game Complete")]
+    [SerializeField] GameObject gameCompleteBG;
+    [SerializeField] GameObject gameCompleteDesc;
+    [SerializeField] TextMeshProUGUI gameCompleteTimeText;
+
+    [Header("Navigator Button")]
+    [SerializeField] GameObject navigatorButtonUI;
 
     // Item UI Manangement
     internal void UpdateItemList()
@@ -81,46 +91,81 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    /*
-    public void ShowCaption(int index, string name)
+    // Time Limits
+    internal void ShowTimeLimit()
     {
-        stageIntroBG.SetActive(true);
-        stageIntroIndexText.text = index + "";
-        stageIntroTitleText.text = name;
-
-        // Off after plenty of time
-        StartCoroutine(ShowCaptionCo());
+        remainedTimeUI.SetActive(true);
+    }
+    internal void UpdateTimeText(int value)
+    {
+        remainedTimeText.text = value + "";
     }
 
-    private IEnumerator ShowCaptionCo()
-    {
-        yield return new WaitForSeconds(uiChangeDuration);
-        stageIntroBG.SetActive(false);
-    }
-    */
-
+    // Memo Text
     internal void ShowMemoText(string contentString)
     {
         memoContentBG.SetActive(true);
         memoContentText.text = contentString;
     }
-
     internal void ShowMemoTextAsIntro(int index, string title)
     {
         memoContentBG.SetActive(true);
         memoContentText.text = index + "-" + title;
         StartCoroutine(ResetMemoTextAuto());
     }
-
     internal IEnumerator ResetMemoTextAuto()
     {
         yield return new WaitForSeconds(uiChangeDuration);
         ResetMemoText();
     }
-
     internal void ResetMemoText()
     {
         memoContentBG.SetActive(false);
         memoContentText.text = "";
+    }
+
+    // Explosive FX
+    internal void ShowExplosive()
+    {
+        explosiveFxBg.SetActive(true);
+    }
+    internal void ResetExplosive()
+    {
+        explosiveFxBg.SetActive(false);
+    }
+
+    // Game Over
+    internal void ShowGameOverBG()
+    {
+        gameOverBG.SetActive(true);
+    }
+    internal void ShowGameOverTitle()
+    {
+        gameOverTitleText.gameObject.SetActive(true);
+    }
+    internal void ShowGameOverDesc()
+    {
+        gameOverDescText.gameObject.SetActive(true);
+    }
+
+    // Game Complete
+    internal void ShowCompleteTitle()
+    {
+        gameCompleteBG.SetActive(true);
+    }
+    internal void ShowCompleteDesc()
+    {
+        gameCompleteDesc.SetActive(true);
+    }
+    internal void ShowCompleteTime(int second)
+    {
+        gameCompleteTimeText.text = second + "s";
+        gameCompleteTimeText.gameObject.SetActive(true);
+    }
+
+    // Show Navigator Button
+    internal void ShowNavigatorButton()
+    {
+        navigatorButtonUI.SetActive(true);
     }
 }

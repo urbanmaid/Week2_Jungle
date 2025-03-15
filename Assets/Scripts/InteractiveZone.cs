@@ -1,8 +1,11 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class InteractiveZone : MonoBehaviour
 {
+    private static float interactionDelay = 0.32f;
+    public static bool isInteractAble = true;
     public UnityEvent eventWhenValidInput; // Interaction only valid object is placed
     public UnityEvent eventWhenInteraction; // Interaction whatever the case
     public UnityEvent eventWhenPlayerEnter; // Interaction when player come to this area
@@ -97,6 +100,11 @@ public class InteractiveZone : MonoBehaviour
 
     void DoInteraction()
     {
-        eventWhenInteraction.Invoke();
+        if(isInteractAble)
+        {
+            eventWhenInteraction.Invoke();
+            //StartCoroutine(DelayInteraction());
+        }
+        
     }
 }

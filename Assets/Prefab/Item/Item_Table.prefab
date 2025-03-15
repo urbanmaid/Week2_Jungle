@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectibleName: SafeKey Default
   iconSprite: {fileID: 21300000, guid: 1b1f6e200f7fe844cb7c4909ded3622b, type: 3}
-  keyCode: 0
+  keyCode: 160
   type: 0
   eventWhenInteraction:
     m_PersistentCalls:

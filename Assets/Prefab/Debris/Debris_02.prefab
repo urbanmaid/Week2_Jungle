@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectibleName: Debris
   iconSprite: {fileID: 0}
-  keyCode: 0
+  keyCode: 130
   type: 3
   eventWhenInteraction:
     m_PersistentCalls:
