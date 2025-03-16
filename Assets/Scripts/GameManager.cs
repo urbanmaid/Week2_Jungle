@@ -40,8 +40,8 @@ public class GameManager : MonoBehaviour
             uiManager.ShowTimeLimit();
             second = 0;
             playStatus = 1;
-            StartCoroutine(CheckSecond());
         }
+        StartCoroutine(CheckSecond());
     }
 
     void InspectComponentsReady()
@@ -54,12 +54,12 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CheckSecond()
     {
-        while(playStatus == 1)
+        while(playStatus != 0)
         {
             yield return new WaitForSeconds(1f);
             second++;
             UpdateRemainedTime();
-            if(second > secondGameOver)
+            if((second > secondGameOver) && hasTimeLimit)
             {
                 Debug.LogError("Game Over!");
                 playStatus = 0;
