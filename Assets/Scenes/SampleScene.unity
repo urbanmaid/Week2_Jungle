@@ -4397,11 +4397,11 @@ RectTransform:
   - {fileID: 2106257187}
   m_Father: {fileID: 1404008037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 260, y: -30}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 520, y: 60}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &286998750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4450,7 +4450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 520
+  m_MinWidth: 600
   m_MinHeight: 60
   m_PreferredWidth: -1
   m_PreferredHeight: -1
@@ -7045,10 +7045,7 @@ PrefabInstance:
       propertyPath: memoContent
       value: "\uD654\uC0B4\uD45C \uD0A4\uB85C \uC774\uB3D9\uD558\uC138\uC694.\r\nZ\uB85C
         \uBB3C\uAC74\uC744 \uC9D1\uACE0, X\uB85C \uAC00\uC9C4 \uBB3C\uAC74\uC744
-        \uB0B4\uB824\uB193\uC73C\uBA70, C\uB85C \uC0C1\uD638\uC791\uC6A9\uC744 \uC218\uD589\uD569\uB2C8\uB2E4.\n\n(\uC870\uC791
-        \uC124\uBA85\uC744 \uC704\uD574 \uBC30\uCE58\uD55C \uBB3C\uAC74\uC774\uBA70
-        \uADF8 \uC678\uC758 \uC0C1\uD638\uC791\uC6A9\uC5D0 \uC0AC\uC6A9\uB418\uC9C0
-        \uC54A\uC73C\uBBC0\uB85C \uAC00\uC838\uAC00\uC9C0 \uB9C8\uC138\uC694.)\r"
+        \uB0B4\uB824\uB193\uC73C\uBA70, C\uB85C \uC0C1\uD638\uC791\uC6A9\uC744 \uC218\uD589\uD569\uB2C8\uB2E4.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 1596012434188960779, guid: 79ee2e6b8b190624fbbaa1c59101bda0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20681,10 +20678,7 @@ PrefabInstance:
       propertyPath: memoContent
       value: "L \uC2A4\uD2F1\uC73C\uB85C \uC774\uB3D9\uD558\uC138\uC694.\r\nA\uB85C
         \uBB3C\uAC74\uC744 \uC9D1\uACE0, B\uB85C \uAC00\uC9C4 \uBB3C\uAC74\uC744
-        \uB0B4\uB824\uB193\uC73C\uBA70, X\uB85C \uC0C1\uD638\uC791\uC6A9\uC744 \uC218\uD589\uD569\uB2C8\uB2E4.\r\r\n\n(\uC870\uC791
-        \uC124\uBA85\uC744 \uC704\uD574 \uBC30\uCE58\uD55C \uBB3C\uAC74\uC774\uBA70
-        \uADF8 \uC678\uC758 \uC0C1\uD638\uC791\uC6A9\uC5D0 \uC0AC\uC6A9\uB418\uC9C0
-        \uC54A\uC73C\uBBC0\uB85C \uAC00\uC838\uAC00\uC9C0 \uB9C8\uC138\uC694.)"
+        \uB0B4\uB824\uB193\uC73C\uBA70, X\uB85C \uC0C1\uD638\uC791\uC6A9\uC744 \uC218\uD589\uD569\uB2C8\uB2E4.\r\r"
       objectReference: {fileID: 0}
     - target: {fileID: 1596012434188960779, guid: 79ee2e6b8b190624fbbaa1c59101bda0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22128,10 +22122,10 @@ RectTransform:
   - {fileID: 286998749}
   m_Father: {fileID: 1223118260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 520, y: 60}
+  m_SizeDelta: {x: 600, y: 60}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1404008038
 MonoBehaviour:
@@ -32090,8 +32084,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -34019,7 +34013,13 @@ MonoBehaviour:
     \uB0B4\uC5D0 \uC788\uB294 \uBB3C\uAC74 \uC911 \uC77C\uBD80\uB294 \uD0C8\uCD9C
     \uC2DC \uD544\uC694\uD558\uAC70\uB098 \uD544\uC694\uD55C \uBB3C\uAC74\uC744 \uAC00\uC9C0\uACE0
     \uC788\uC2B5\uB2C8\uB2E4. \uC774\uB4E4\uC744 \uC9C0\uB098\uCE58\uC9C0 \uB9D0\uACE0
-    \uC9C4\uD589\uD558\uC138\uC694."
+    \uC9C4\uD589\uD558\uC138\uC694.\n\n\uBAA8\uB4E0 \uBB3C\uAC74\uC740 \uC778\uBCA4\uD1A0\uB9AC
+    \uB0B4\uC5D0\uC11C\uB294 \uADF8 \uD6A8\uACFC\uB97C \uBC1C\uD718\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+    \uC0C1\uD638\uC791\uC6A9\uC744 \uC704\uD574\uC11C\uB294 \uC778\uBCA4\uD1A0\uB9AC\uC5D0\uC11C
+    \uAEBC\uB0B4\uC57C \uD569\uB2C8\uB2E4.\n\n(\uC5F4\uC1E0\uB97C \uC81C\uC678\uD55C
+    \uC774 \uBC29\uC5D0 \uC788\uB294 \uBAA8\uB4E0 \uBB3C\uAC74\uC740 \uC870\uC791
+    \uC124\uBA85\uC744 \uC704\uD574 \uBC30\uCE58\uD55C \uBB3C\uAC74\uC774\uBA70 \uADF8
+    \uC678\uC758 \uC0C1\uD638\uC791\uC6A9\uC5D0 \uC0AC\uC6A9\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.)"
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
