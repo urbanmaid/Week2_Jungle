@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Localization;
 
 public class InteractiveZone : MonoBehaviour
 {
@@ -17,23 +18,26 @@ public class InteractiveZone : MonoBehaviour
     [SerializeField] bool usingKeyCode;
     [SerializeField] int keyCode;
     [SerializeField] string target;
-    //private bool isPlayerIn = false;
 
+    [Header("Localization")]
+    [SerializeField] private LocalizedString localizedString;
+
+    #region Verification
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(usingRequiredValidInput) // If this interactiveZone required valid input
+        if (usingRequiredValidInput) // If this interactiveZone required valid input
         {
             Collectible collectible = collision.GetComponent<Collectible>();
-            if(collision.CompareTag("Collectible") && collectible)
+            if (collision.CompareTag("Collectible") && collectible)
             {
-            // SetValid should be called the code or name should be same
-                if(usingKeyCode)
+                // SetValid should be called the code or name should be same
+                if (usingKeyCode)
                 {
-                    if(keyCode == collectible.keyCode)
+                    if (keyCode == collectible.keyCode)
                     {
                         SetValid();
-                        if(collectible.type == Collectible.CollectibleType.Key)
+                        if (collectible.type == Collectible.CollectibleType.Key)
                         {
                             Destroy(collision.gameObject);
                         }
@@ -41,10 +45,10 @@ public class InteractiveZone : MonoBehaviour
                 }
                 else
                 {
-                    if(target == collectible.collectibleName)
+                    if (target == collectible.collectibleName)
                     {
                         SetValid();
-                        if(collectible.type == Collectible.CollectibleType.Key)
+                        if (collectible.type == Collectible.CollectibleType.Key)
                         {
                             Destroy(collision.gameObject);
                         }
@@ -53,7 +57,7 @@ public class InteractiveZone : MonoBehaviour
             }
         }
 
-        if(collision.CompareTag("Player") && (eventWhenPlayerEnter != null))
+        if (collision.CompareTag("Player") && (eventWhenPlayerEnter != null))
         {
             eventWhenPlayerEnter.Invoke();
         }
@@ -61,7 +65,7 @@ public class InteractiveZone : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && (eventWhenPlayerExit != null))
+        if (collision.CompareTag("Player") && (eventWhenPlayerExit != null))
         {
             eventWhenPlayerExit.Invoke();
         }
@@ -72,16 +76,18 @@ public class InteractiveZone : MonoBehaviour
         isValid = true;
         DoInteractionWhenValid();
     }
-
+    #endregion
+    #region Interaction
     internal void DoInteractionCheckout()
     {
         //Debug.Log("Player has interaction with this object: " + gameObject);
 
         // if usingRequiredValidInput is true, isAbleToDoValidInput should be true too
         // for activating interaction
-        if(usingRequiredValidInput)
+        if (usingRequiredValidInput)
         {
-            if(isValid){
+            if (isValid)
+            {
                 //DoInteractionWhenValid();
                 DoInteraction();
             }
@@ -100,11 +106,27 @@ public class InteractiveZone : MonoBehaviour
 
     void DoInteraction()
     {
-        if(isInteractAble)
+        if (isInteractAble)
         {
             eventWhenInteraction.Invoke();
             //StartCoroutine(DelayInteraction());
         }
-        
     }
+    #endregion
+    #region Localization
+    public void TriggerShowMemo(bool asFixed)
+    {
+        if (localizedString != null)
+        {
+            if (asFixed)
+            {
+                GameManager.instance.ShowMemoTextWithLocale(localizedString);
+            }
+            else
+            {
+                GameManager.instance.ShowMemoTextAsCaptionWithLocale(localizedString);
+            }
+        }
+    }
+    #endregion
 }

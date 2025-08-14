@@ -103,6 +103,30 @@ MonoBehaviour:
     m_Key: ingame.itemdesc.descendingLine.installed
     m_Metadata:
       m_Items: []
+  - m_Id: 294848019922944
+    m_Key: ingame.itemdesc.descendingLine.onout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303570771345408
+    m_Key: ingame.itemdesc.crowbar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 304326211633152
+    m_Key: ingame.itemdesc.obstacleheightkitchen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 304793012502528
+    m_Key: ingame.itemdesc.nitrogen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 313857574535168
+    m_Key: ingame.itemdesc.nitrogen.warning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323446676226048
+    m_Key: ingame.itemdesc.blocker
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

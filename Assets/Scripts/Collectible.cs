@@ -22,8 +22,6 @@ public class Collectible : MonoBehaviour
 
     [Header("Localization")]
     [SerializeField] private LocalizedString localizedString;
-    public string localizedStringResult;
-    private Coroutine loadCoroutine;
 
     internal void BePickUp(GameObject parentObject)
     {

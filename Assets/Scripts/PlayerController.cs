@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(objectNear.Count > 0)
             {
-                objectNear[^1].GetComponent<Collectible>().BeInteraction();
+                if (objectNear[^1]) objectNear[^1].GetComponent<Collectible>().BeInteraction();
             }
         }
     }
