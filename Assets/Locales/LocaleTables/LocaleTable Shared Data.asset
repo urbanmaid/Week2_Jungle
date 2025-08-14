@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: LocaleTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: LocaleTable
+  m_TableCollectionNameGuidString: fd92060c2df8b5c4a83e55b0b13c8e7c
+  m_Entries:
+  - m_Id: 1062253461504
+    m_Key: ui.menu.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1126501810176
+    m_Key: ui.menu.start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1161784295424
+    m_Key: ui.menu.starttimeattack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207867113472
+    m_Key: ui.menu.exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1335961157632
+    m_Key: ui.startscreen.playtip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1686273622016
+    m_Key: ui.startscreen.starttimeattack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1841588699136
+    m_Key: ui.startscreen.story
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1946186252288
+    m_Key: ui.startscreen.confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2150805372928
+    m_Key: ui.ingame.control
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3613203988480
+    m_Key: ui.complete.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 212568177999872
+    m_Key: ui.complete.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221330062278656
+    m_Key: ui.complete.cleartime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221446412271616
+    m_Key: ui.gameover.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221600578109440
+    m_Key: ui.gameover.desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221747051593728
+    m_Key: ui.navigationmenu.restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228106300129280
+    m_Key: ingame.stage.office
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228180623196160
+    m_Key: ingame.stage.dinings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228220926263296
+    m_Key: ingame.stage.machinary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228258125545472
+    m_Key: ingame.stage.parkinglot
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4112289241709412565
+  references:
+    version: 2
+    RefIds:
+    - rid: 4112289241709412565
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1755084731518
