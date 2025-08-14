@@ -121,6 +121,21 @@ MonoBehaviour:
     m_Localized: Parking Lot
     m_Metadata:
       m_Items: []
+  - m_Id: 256742898106368
+    m_Localized: You can cross the pit via this item.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256880454500352
+    m_Localized: According to the Building Construction Standards Act, this building
+      is equipped with a descending line. It allows you to safely descend from a
+      building in case of a fire. Check the location of the descending line adapter
+      for safety.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 258467977592832
+    m_Localized: Installed desending line.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

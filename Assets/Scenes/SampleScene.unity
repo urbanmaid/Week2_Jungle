@@ -24162,16 +24162,53 @@ MonoBehaviour:
   player: {fileID: 220589271}
   uiManager: {fileID: 1187353556}
   stageNameList:
-  - "1\uBD80\uD130 \uC2DC\uC791\uD558\uBA70 \uC774 \uC601\uC5ED \uC0AC\uC6A9 \uC548
-    \uD568"
-  - "\uB2F9\uC9C1\uC790 \uADFC\uBB34\uC2E4 & \uBCF5\uB3C4"
-  - "\uC5F0\uD68C\uC7A5 & \uC870\uB9AC\uC2E4"
-  - "\uAE30\uACC4\uC2E4 & \uBB3C\uB958\uCC3D\uACE0"
-  - "\uC784\uC9C1\uC6D0 \uC8FC\uCC28\uC7A5"
+  - m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:fd92060c2df8b5c4a83e55b0b13c8e7c
+    m_TableEntryReference:
+      m_KeyId: 228106300129280
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:fd92060c2df8b5c4a83e55b0b13c8e7c
+    m_TableEntryReference:
+      m_KeyId: 228180623196160
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:fd92060c2df8b5c4a83e55b0b13c8e7c
+    m_TableEntryReference:
+      m_KeyId: 228220926263296
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:fd92060c2df8b5c4a83e55b0b13c8e7c
+    m_TableEntryReference:
+      m_KeyId: 228258125545472
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   second: 0
   secondGameOver: 360
   playStatus: 1
   hasTimeLimit: 0
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1468932128
 PrefabInstance:
   m_ObjectHideFlags: 0

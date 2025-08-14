@@ -91,6 +91,18 @@ MonoBehaviour:
     m_Key: ingame.stage.parkinglot
     m_Metadata:
       m_Items: []
+  - m_Id: 256742898106368
+    m_Key: ingame.itemdesc.ironingboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256880454500352
+    m_Key: ingame.itemdesc.descendingLine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 258467977592832
+    m_Key: ingame.itemdesc.descendingLine.installed
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

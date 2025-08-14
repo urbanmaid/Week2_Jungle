@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -8,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public PlayerController player;
     public UIManager uiManager;
-    [SerializeField] List<string> stageNameList;
+    [SerializeField] List<LocalizedString> stageNameList;
     private readonly float stageIntroDuration = 3f;
 
     [Header("Gameplay")]
@@ -95,6 +96,10 @@ public class GameManager : MonoBehaviour
     {
         uiManager.ShowMemoText(contentString);
     }
+    public void ShowMemoTextWithLocale(LocalizedString localizedString)
+    {
+        uiManager.ShowMemoText(localizedString.GetLocalizedStringAsync().Result);
+    }
     public void ResetMemoText()
     {
         uiManager.ResetMemoText();
@@ -105,10 +110,22 @@ public class GameManager : MonoBehaviour
         uiManager.ShowMemoText(contentString);
         Invoke(nameof(ResetMemoText), stageIntroDuration);
     }
+    public void ShowMemoTextAsCaptionWithLocale(LocalizedString localizedString)
+    {
+        uiManager.ShowMemoText(localizedString.GetLocalizedStringAsync().Result);
+        Invoke(nameof(ResetMemoText), stageIntroDuration);
+    }
 
     public void ShowIntroOf(int index)
     {
-        ShowStageIntro(index, stageNameList[index]);
+        if
+        (
+            index < stageNameList.Count &&
+            stageNameList[index] != null
+        )
+        {
+            ShowStageIntro(index, stageNameList[index].GetLocalizedStringAsync().Result);
+        }
     }
     public void ShowStageIntro(int index, string title)
     {
