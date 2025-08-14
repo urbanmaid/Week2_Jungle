@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Localization;
 
 public class Collectible : MonoBehaviour
 {
@@ -18,6 +20,11 @@ public class Collectible : MonoBehaviour
     public CollectibleType type;
     public UnityEvent eventWhenInteraction;
 
+    [Header("Localization")]
+    [SerializeField] private LocalizedString localizedString;
+    public string localizedStringResult;
+    private Coroutine loadCoroutine;
+
     internal void BePickUp(GameObject parentObject)
     {
         //Debug.Log("Player got an " + objectName);
@@ -27,7 +34,7 @@ public class Collectible : MonoBehaviour
 
         // Set the sprite off
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        if(spriteRenderer)
+        if (spriteRenderer)
         {
             Color savedColor = spriteRenderer.color;
             savedColor.a = 0f;
@@ -42,7 +49,7 @@ public class Collectible : MonoBehaviour
     {
         // Set the sprite on
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        if(spriteRenderer)
+        if (spriteRenderer)
         {
             Color savedColor = spriteRenderer.color;
             savedColor.a = 1f;
@@ -56,5 +63,21 @@ public class Collectible : MonoBehaviour
     {
         Debug.Log("Interaction with Collectible has been called");
         eventWhenInteraction.Invoke();
+    }
+
+    public void TriggerShowMemo()
+    {
+        if (localizedString != null)
+        {
+            GameManager.instance.ShowMemoTextWithLocale(localizedString);
+        }
+    }
+
+    public void TriggerShowMemoAsCaption()
+    {
+        if (localizedString != null)
+        {
+            GameManager.instance.ShowMemoTextAsCaptionWithLocale(localizedString);
+        }
     }
 }

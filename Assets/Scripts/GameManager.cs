@@ -92,6 +92,11 @@ public class GameManager : MonoBehaviour
         uiManager.UpdateItemList();
     }
 
+    public void ResetMemoText()
+    {
+        uiManager.ResetMemoText();
+    }
+    
     public void ShowMemoText(string contentString)
     {
         uiManager.ShowMemoText(contentString);
@@ -99,10 +104,6 @@ public class GameManager : MonoBehaviour
     public void ShowMemoTextWithLocale(LocalizedString localizedString)
     {
         uiManager.ShowMemoText(localizedString.GetLocalizedStringAsync().Result);
-    }
-    public void ResetMemoText()
-    {
-        uiManager.ResetMemoText();
     }
 
     public void ShowMemoTextAsCaption(string contentString)
@@ -115,6 +116,7 @@ public class GameManager : MonoBehaviour
         uiManager.ShowMemoText(localizedString.GetLocalizedStringAsync().Result);
         Invoke(nameof(ResetMemoText), stageIntroDuration);
     }
+
 
     public void ShowIntroOf(int index)
     {
