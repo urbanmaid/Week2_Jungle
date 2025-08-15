@@ -17,7 +17,78 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: fd92060c2df8b5c4a83e55b0b13c8e7c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 1126501810176
+    m_Localized: "D\xE9marrer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1161784295424
+    m_Localized: "D\xE9marrer (Essais temporel)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207867113472
+    m_Localized: Sortie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1335961157632
+    m_Localized: "Trouver le moyen d'\xE9chapper \xE0 l'h\xF4tel sur un \nles dommages
+      caus\xE9s par le tremblement de terre en touchant le des accessoires autour
+      de l'\xE9cran.\n\nNe manquez pas les accessoires qui peuvent servir de cl\xE9s
+      pour ou des accessoires qui peuvent les inclure.\n\nTous les accessoires fonctionnent
+      en DEHORS de l'inventaire. Donc tu dois d\xE9poser \xE7a."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1686273622016
+    m_Localized: "AVERTISSEMENT :\r\n\r\nLe mode d'essai temporel a des limites de
+      \r\ntemps de jeu. Tu dois t'\xE9chapper. \r\nh\xF4tel avant l'expiration du
+      d\xE9lai, \r\nou c'est consid\xE9r\xE9 comme un \xE9chec.\r\n\r\nLe d\xE9lai
+      est appliqu\xE9 apr\xE8s le tutoriel."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1841588699136
+    m_Localized: "Vous travaillez \xE0 l'h\xF4tel.\r\n\r\nVous avez travaill\xE9
+      24 heures sur 24 pour inspecter l'h\xF4tel. Cependant, apr\xE8s que le tremblement
+      de terre ait frapp\xE9 et \xE9vacu\xE9 tous les clients et travailleurs de
+      l'h\xF4tel, le patron a ferm\xE9 l'h\xF4tel. Sans \xE9valuer votre survie,
+      ils ont abandonn\xE9 la recherche de survivants.\r\n\r\nMaintenant tu dois
+      t'\xE9chapper de l'h\xF4tel tout de suite."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1946186252288
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2150805372928
+    m_Localized: "Z-D\xE9croche\nX-Propulseur \nC-Interagir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3613203988480
+    m_Localized: C'est bon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 212568177999872
+    m_Localized: "F\xE9licitations!\n\nMalgr\xE9 un tremblement de terre violent,
+      vous avez r\xE9ussi \xE0 \xE9chapper \xE0 l'h\xF4tel vivant, malgr\xE9 les
+      faibles chances de survie."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221330062278656
+    m_Localized: "Dur\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221446412271616
+    m_Localized: Fin de la partie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221600578109440
+    m_Localized: "La base de l'h\xF4tel a \xE9t\xE9 soudainement mutil\xE9e et s'est
+      effondr\xE9e.\r\n\r\nTu es mort."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221747051593728
+    m_Localized: "Red\xE9marrez"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -115,6 +115,7 @@ MonoBehaviour:
     - Locale-de
     - Locale-ja
     - Locale-pt
+    - Locale-es
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 51e0f787ce2ceee4f8cc9237e6b4004d, type: 2}
