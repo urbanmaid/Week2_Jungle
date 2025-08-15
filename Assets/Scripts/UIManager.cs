@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -20,7 +22,7 @@ public class UIManager : MonoBehaviour
     [Header("> Messege")]
     [SerializeField] GameObject memoContentBG;
     [SerializeField] TextMeshProUGUI memoContentText;
-    
+
     [Header("> Explosive FX")]
     [SerializeField] GameObject explosiveFxBg;
 
@@ -37,6 +39,14 @@ public class UIManager : MonoBehaviour
     [Header("Navigator Button")]
     [SerializeField] GameObject navigatorButtonUI;
 
+    [Header("> Settings")]
+    [SerializeField] TMP_Dropdown languageDropdown;
+
+    void Start()
+    {
+        if (languageDropdown != null) StartCoroutine(SetupLocalesRoutine());
+    }
+
     // Item UI Manangement
     internal void UpdateItemList()
     {
@@ -45,17 +55,17 @@ public class UIManager : MonoBehaviour
         //Debug.Log("collectibleCount: " + collectibleCount + ", collectibleArrayCount: " + collectibleArrayCount);
 
         // Apply sprite icon
-        for(int i = 1; i < collectibleCount; i++)
+        for (int i = 1; i < collectibleCount; i++)
         {
             Image targetIconApplied = itemArray.transform.GetChild(i).GetComponent<Image>(); // Define where the sprite applied
             Transform targetCollectible = GameManager.instance.player.transform.GetChild(i); // Define where the sprite refered
 
-            if(collectibleCount <= collectibleArrayCount)
+            if (collectibleCount <= collectibleArrayCount)
             {
-                if(targetCollectible.GetComponent<SpriteRenderer>())
+                if (targetCollectible.GetComponent<SpriteRenderer>())
                 {
                     // Changes image of icon
-                    if(targetCollectible.GetComponent<Collectible>().iconSprite)  // If collectible has its thumb of item
+                    if (targetCollectible.GetComponent<Collectible>().iconSprite)  // If collectible has its thumb of item
                     {
                         Debug.Log("UI has got its icon from iconSprite");
                         targetIconApplied.sprite = targetCollectible.GetComponent<Collectible>().iconSprite;
@@ -83,7 +93,7 @@ public class UIManager : MonoBehaviour
         }
 
         // Apply empty icon
-        for(int i = collectibleCount; i < collectibleArrayCount; i++)
+        for (int i = collectibleCount; i < collectibleArrayCount; i++)
         {
             Image targetIconApplied = itemArray.transform.GetChild(i).GetComponent<Image>();
             targetIconApplied.sprite = itemArrayWhenEmpty;
@@ -167,5 +177,52 @@ public class UIManager : MonoBehaviour
     internal void ShowNavigatorButton()
     {
         navigatorButtonUI.SetActive(true);
+    }
+
+    // Set Language
+    private IEnumerator SetupLocalesRoutine()
+    {
+        // Wait until Localization is Initialized
+        yield return LocalizationSettings.InitializationOperation;
+
+        // Bring all locales
+        var locales = LocalizationSettings.AvailableLocales.Locales;
+        var options = new List<TMP_Dropdown.OptionData>();
+        int currentLocaleIndex = 0;
+
+        // Add locale name as dropdown
+        for (int i = 0; i < locales.Count; i++)
+        {
+            var locale = locales[i];
+            if (LocalizationSettings.SelectedLocale == locale)
+            {
+                currentLocaleIndex = i;
+            }
+            options.Add(new TMP_Dropdown.OptionData(locale.LocaleName));
+        }
+
+        // Remove default options and replace
+        languageDropdown.ClearOptions();
+        languageDropdown.AddOptions(options);
+
+        languageDropdown.SetValueWithoutNotify(currentLocaleIndex);
+        languageDropdown.onValueChanged.AddListener(SetLanguage);
+    }
+
+    public void SetLanguage(int index)
+    {
+        StartCoroutine(SetLocaleRoutine(index));
+    }
+
+    private IEnumerator SetLocaleRoutine(int index)
+    {
+        // Turn off Dropdown while changing language
+        languageDropdown.interactable = false;
+
+        var selectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
+        LocalizationSettings.SelectedLocale = selectedLocale;
+        yield return LocalizationSettings.InitializationOperation;
+
+        languageDropdown.interactable = true;
     }
 }
