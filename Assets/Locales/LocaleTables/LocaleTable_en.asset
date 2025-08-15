@@ -82,7 +82,7 @@ MonoBehaviour:
 
 
       Despite a severe earthquake, you managed
-      to escape the hotel alive, despite the slim chance of survival.'
+      to escape the hotel alive, despite the sparse chance of survival.'
     m_Metadata:
       m_Items: []
   - m_Id: 221330062278656
@@ -164,6 +164,32 @@ MonoBehaviour:
   - m_Id: 323446676226048
     m_Localized: Something prevents the door open normally. You need to break down
       the door.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327057900666880
+    m_Localized: Door got frozen. Break the door with sharp props.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369688609390592
+    m_Localized: Ladder. Used for crossing over the pit.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382412684886016
+    m_Localized: Got a damage of electricity with the wire! Find a way to cut off
+      the power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382862767259648
+    m_Localized: Electricity of facility got cut off.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386544577642496
+    m_Localized: There are obstacles in front. Need an object to cross over it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619299261480960
+    m_Localized: Can't go over it. Need something to pass through the polluted water.
+      Think about the furniture you have passed by.
     m_Metadata:
       m_Items: []
   references:

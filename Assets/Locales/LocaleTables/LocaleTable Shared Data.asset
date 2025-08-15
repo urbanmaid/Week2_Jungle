@@ -127,6 +127,30 @@ MonoBehaviour:
     m_Key: ingame.itemdesc.blocker
     m_Metadata:
       m_Items: []
+  - m_Id: 327057900666880
+    m_Key: ingame.itemdesc.blocker.frozen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369688609390592
+    m_Key: ingame.itemdesc.ladder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382412684886016
+    m_Key: ingame.itemdesc.elecshock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382862767259648
+    m_Key: ingame.itemdesc.elecshockcancelled
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386544577642496
+    m_Key: ingame.itemdesc.requiredladder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619299261480960
+    m_Key: ingame.itemdesc.requiredbridge
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
