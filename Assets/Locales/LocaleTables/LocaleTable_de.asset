@@ -17,7 +17,165 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: fd92060c2df8b5c4a83e55b0b13c8e7c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 1126501810176
+    m_Localized: Starten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1161784295424
+    m_Localized: "Starten (Zeitpr\xFCfung)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207867113472
+    m_Localized: Ausfahrt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1335961157632
+    m_Localized: "Finden Sie den Weg, um Hotel bei einem Erdbeben Schaden zu entkommen,
+      indem Sie die Vorh\xE4nge um den Bildschirm ber\xFChren.\n\nVerpassen Sie nicht
+      Props, die als Schl\xFCssel zu entkommen, oder Props, die sie enthalten k\xF6nnen.\n\nAlle
+      Props arbeiten AUSSERHALB des Inventars. Also musst du die runterlassen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1686273622016
+    m_Localized: "WARNUNG:\r\n\r\nDer Zeitversuchmodus hat Grenzen von Spielzeit.
+      Du musst entkommen. Hotel vor Ablauf der Frist, oder es wird als gescheitert
+      gesch\xE4tzt.\r\n\r\nNach dem Tutorial wird Zeitbegrenzung angewandt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1841588699136
+    m_Localized: "Ihr seid Hotelangestellte.\r\n\r\nSie haben rund um die Uhr gearbeitet,
+      um das Hotel zu inspizieren. Nach dem Erdbeben jedoch hat der Chef das Hotel
+      geschlossen. Ohne Ihre \xDCberlebenssituation zu beurteilen, haben sie die
+      Suche nach \xDCberlebenden aufgegeben.\r\n\r\nDu musst sofort aus dem Hotel
+      fliehen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1946186252288
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2150805372928
+    m_Localized: 'Z-Pick Up
+
+      X-Drop Down
+
+      C-Interaktion'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3613203988480
+    m_Localized: Klar!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 212568177999872
+    m_Localized: "Herzlichen Gl\xFCckwunsch!\r\n\r\nTrotz eines schweren Erdbebens
+      konnten Sie das Hotel lebend entkommen, trotz der geringen \xDCberlebenschancen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221330062278656
+    m_Localized: Dauer der Klarstellung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221446412271616
+    m_Localized: Spiel beendet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221600578109440
+    m_Localized: "Das Hotel wurde pl\xF6tzlich verw\xFCstet und zusammengebrochen.\r\n\r\nDu
+      bist tot."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221747051593728
+    m_Localized: Restarten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228106300129280
+    m_Localized: "B\xFCro & Hallway"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228180623196160
+    m_Localized: "Bankettsaal & K\xFCche"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228220926263296
+    m_Localized: Maschinenraum & Lagerung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228258125545472
+    m_Localized: Parkplatz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256742898106368
+    m_Localized: "\xDCber diesen Artikel k\xF6nnen Sie die Grube \xFCberqueren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256880454500352
+    m_Localized: "Gem\xE4\xDF dem Baugrundsatzgesetz ist dieses Geb\xE4ude mit einer
+      absteigenden Linie ausgestattet. Es erlaubt Ihnen, im Falle eines Feuers sicher
+      aus einem Geb\xE4ude herunterzugehen. \xDCberpr\xFCfen Sie die Position des
+      absteigenden Line Adapters f\xFCr Sicherheit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 258467977592832
+    m_Localized: Installierte Absteigende Linie.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 294848019922944
+    m_Localized: Absteigende Linie. Denk mal, wo man diesen Vorschub stecken soll.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303570771345408
+    m_Localized: "Brecheisen. Fr\xFCher brach ich etwas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 304326211633152
+    m_Localized: "Dieser Bereich ist mit einigen H\xF6hen blockiert. Finde Props,
+      um hoch zu klettern."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 304793012502528
+    m_Localized: "Fl\xFCssig-Nitroltanks. Es ist besser, die Hindernisse zu beseitigen
+      und sie dann zu zerst\xF6ren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 313857574535168
+    m_Localized: "Fl\xFCssiges Stickstoff, ENTWICKLUNG AUF HANDLE\r\n\r\nWenn Sie
+      falsch gehandhabt, kann es andere Objekte einfrieren, wodurch es stark schw\xE4cher
+      wird."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323446676226048
+    m_Localized: "Etwas verhindert, dass sich die T\xFCr normal \xF6ffnet. Du musst
+      die T\xFCr brechen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327057900666880
+    m_Localized: "Die T\xFCr wurde eingefroren. Brechen Sie die T\xFCr mit scharfen
+      Vorrichtungen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369688609390592
+    m_Localized: "Treppe. Wird zum \xDCberqueren der Grube verwendet."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382412684886016
+    m_Localized: "Der Draht hat Strom besch\xE4digt! Finden Sie einen Weg, die Stromversorgung
+      abzuschalten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382862767259648
+    m_Localized: "Die Elektrizit\xE4t der Anlage wurde abgeschnitten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386544577642496
+    m_Localized: "Es gibt Hindernisse vorne. Man braucht ein Objekt, um es zu \xFCberqueren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619299261480960
+    m_Localized: "Ich kann es nicht durchgehen. Ich brauche etwas, um durch das verschmutzte
+      Wasser zu passieren. Denk an die M\xF6bel, die du vorbeigekommen bist."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

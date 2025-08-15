@@ -39,19 +39,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1686273622016
-    m_Localized: "AVERTISSEMENT :\r\n\r\nLe mode d'essai temporel a des limites de
-      \r\ntemps de jeu. Tu dois t'\xE9chapper. \r\nh\xF4tel avant l'expiration du
-      d\xE9lai, \r\nou c'est consid\xE9r\xE9 comme un \xE9chec.\r\n\r\nLe d\xE9lai
-      est appliqu\xE9 apr\xE8s le tutoriel."
+    m_Localized: "AVERTISSEMENT :\n\nLe mode d'essai temporel a des limites de \ntemps
+      de jeu. Tu dois t'\xE9chapper. \nh\xF4tel avant l'expiration du d\xE9lai, \nou
+      c'est consid\xE9r\xE9 comme un \xE9chec.\n\nLe d\xE9lai est appliqu\xE9 apr\xE8s
+      le tutoriel."
     m_Metadata:
       m_Items: []
   - m_Id: 1841588699136
-    m_Localized: "Vous travaillez \xE0 l'h\xF4tel.\r\n\r\nVous avez travaill\xE9
-      24 heures sur 24 pour inspecter l'h\xF4tel. Cependant, apr\xE8s que le tremblement
-      de terre ait frapp\xE9 et \xE9vacu\xE9 tous les clients et travailleurs de
-      l'h\xF4tel, le patron a ferm\xE9 l'h\xF4tel. Sans \xE9valuer votre survie,
-      ils ont abandonn\xE9 la recherche de survivants.\r\n\r\nMaintenant tu dois
-      t'\xE9chapper de l'h\xF4tel tout de suite."
+    m_Localized: "Vous travaillez \xE0 l'h\xF4tel.\n\nVous avez travaill\xE9 24 heures
+      sur 24 pour inspecter l'h\xF4tel. Cependant, apr\xE8s que le tremblement de
+      terre ait frapp\xE9 et \xE9vacu\xE9 tous les clients et travailleurs de l'h\xF4tel,
+      le patron a ferm\xE9 l'h\xF4tel. Sans \xE9valuer votre survie, ils ont abandonn\xE9
+      la recherche de survivants.\n\nMaintenant tu dois t'\xE9chapper de l'h\xF4tel
+      tout de suite."
     m_Metadata:
       m_Items: []
   - m_Id: 1946186252288
@@ -87,6 +87,92 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 221747051593728
     m_Localized: "Red\xE9marrez"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228106300129280
+    m_Localized: gardes - couloir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228180623196160
+    m_Localized: "F\xEAtes - Cuisine"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228220926263296
+    m_Localized: Machines - Logistique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228258125545472
+    m_Localized: "parc de stationnement pour les employ\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256742898106368
+    m_Localized: Vous pouvez traverser la fosse via cet objet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256880454500352
+    m_Localized: "En vertu de la Loi sur les normes de construction des b\xE2timents,
+      cet immeuble est \xE9quip\xE9 d'une ligne descendante. Il vous permet de descendre
+      d'un b\xE2timent en toute s\xE9curit\xE9 en cas d'incendie. V\xE9rifiez l'emplacement
+      de l'adaptateur de ligne descendante pour plus de s\xE9curit\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 258467977592832
+    m_Localized: Installation d'une ligne de descente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 294848019922944
+    m_Localized: "Ligne descendante. Pense o\xF9 mettre cet accessoire."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303570771345408
+    m_Localized: Le pied-de-biche. Il cassait quelque chose.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 304326211633152
+    m_Localized: "Cette zone est bloqu\xE9e avec quelques hauteurs. Trouve des accessoires
+      pour grimper."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 304793012502528
+    m_Localized: "De l'azote liquide. \xC7a semble efficace pour d\xE9truire quelque
+      chose en gelant."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 313857574535168
+    m_Localized: "Azote liquide, PR\xC9CAUTION SUR LA MANIPULATION\n\nSi vous avez
+      mal g\xE9r\xE9, il peut geler d'autres objets, ce qui l'affaiblit fortement."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323446676226048
+    m_Localized: "Quelque chose emp\xEAche la porte de s'ouvrir normalement. Tu dois
+      d\xE9foncer la porte."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327057900666880
+    m_Localized: "La porte s'est fig\xE9e. Enfoncez la porte avec des accessoires
+      tranchants."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369688609390592
+    m_Localized: "L'\xE9chelle. Utilis\xE9 pour traverser la fosse."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382412684886016
+    m_Localized: "J'ai des d\xE9g\xE2ts d'\xE9lectricit\xE9 avec le fil ! Trouver
+      un moyen de couper le courant."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382862767259648
+    m_Localized: "L'\xE9lectricit\xE9 de l'installation a \xE9t\xE9 coup\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386544577642496
+    m_Localized: Il y a des obstacles devant. J'ai besoin d'un objet pour le traverser.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619299261480960
+    m_Localized: "Je ne peux pas l'examiner. J'ai besoin de quelque chose pour traverser
+      l'eau pollu\xE9e. Pensez aux meubles que vous avez pass\xE9s."
     m_Metadata:
       m_Items: []
   references:

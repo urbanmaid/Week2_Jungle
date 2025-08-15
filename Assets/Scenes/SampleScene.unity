@@ -966,7 +966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Ausfahrt
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
   m_sharedMaterial: {fileID: -7081658477223619499, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
@@ -3065,7 +3065,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Miranda Hotel Survival'
+  m_text: ui.menu.desc
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
   m_sharedMaterial: {fileID: -7081658477223619499, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
@@ -3717,7 +3717,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Starten
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
   m_sharedMaterial: {fileID: -7081658477223619499, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
@@ -6609,7 +6609,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 32, y: 192}
-  m_SizeDelta: {x: 500, y: 60}
+  m_SizeDelta: {x: 800, y: 60}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &385464188
 MonoBehaviour:
@@ -7097,10 +7097,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Find the way to escape hotel on a \ndamage of earthquake by touching the\nprops
-    around the screen.\n\nDon't miss props that can function as keys to \nescape,
-    or props that can include them.\n\nAll props works OUTSIDE of inventory.\nSo
-    you need to drop these down."
+  m_text: "Finden Sie den Weg, um Hotel bei einem Erdbeben Schaden zu entkommen,
+    indem Sie die Vorh\xE4nge um den Bildschirm ber\xFChren.\n\nVerpassen Sie nicht
+    Props, die als Schl\xFCssel zu entkommen, oder Props, die sie enthalten k\xF6nnen.\n\nAlle
+    Props arbeiten AUSSERHALB des Inventars. Also musst du die runterlassen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
   m_sharedMaterial: {fileID: -7081658477223619499, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
@@ -11073,7 +11073,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 32, y: 112}
-  m_SizeDelta: {x: 500, y: 60}
+  m_SizeDelta: {x: 800, y: 60}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &727015729
 MonoBehaviour:
@@ -12536,17 +12536,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You are workers of hotel.
-
-
-    You''ve been working around the clock
-    to inspect the hotel. However, after the earthquake struck and evacuated all
-    hotel guests and workers, the boss has closed the hotel. Without assessing your
-    survival situation, they''ve abandoned the search for survivors.
-
-
-    Now you
-    must escape the hotel right now.'
+  m_text: "Ihr seid Hotelangestellte.\r\n\r\nSie haben rund um die Uhr gearbeitet,
+    um das Hotel zu inspizieren. Nach dem Erdbeben jedoch hat der Chef das Hotel
+    geschlossen. Ohne Ihre \xDCberlebenssituation zu beurteilen, haben sie die Suche
+    nach \xDCberlebenden aufgegeben.\r\n\r\nDu musst sofort aus dem Hotel fliehen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
   m_sharedMaterial: {fileID: -7081658477223619499, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
@@ -22622,7 +22615,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 32, y: 32}
-  m_SizeDelta: {x: 500, y: 60}
+  m_SizeDelta: {x: 800, y: 60}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1266236125
 MonoBehaviour:
@@ -23961,7 +23954,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start (Time Trial)
+  m_text: "Starten (Zeitpr\xFCfung)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
   m_sharedMaterial: {fileID: -7081658477223619499, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
@@ -25677,11 +25670,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Z-Pick Item Up
+  m_text: 'Z-Pick Up
 
-    X-Drop Item Down
+    X-Drop Down
 
-    C-Interact'
+    C-Interaktion'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
   m_sharedMaterial: {fileID: -7081658477223619499, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
