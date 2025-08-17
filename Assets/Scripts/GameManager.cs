@@ -193,6 +193,7 @@ public class GameManager : MonoBehaviour
     // Game Status Management
     public void RestartGame()
     {
+        Time.timeScale = 1f;
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }

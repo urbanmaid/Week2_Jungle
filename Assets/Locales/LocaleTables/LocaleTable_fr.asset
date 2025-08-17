@@ -90,19 +90,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 228106300129280
-    m_Localized: gardes - couloir
+    m_Localized: Gardes & Couloir
     m_Metadata:
       m_Items: []
   - m_Id: 228180623196160
-    m_Localized: "F\xEAtes - Cuisine"
+    m_Localized: "F\xEAtes & Cuisine"
     m_Metadata:
       m_Items: []
   - m_Id: 228220926263296
-    m_Localized: Machines - Logistique
+    m_Localized: Machines & Logistique
     m_Metadata:
       m_Items: []
   - m_Id: 228258125545472
-    m_Localized: "parc de stationnement pour les employ\xE9s"
+    m_Localized: Parking attenant
     m_Metadata:
       m_Items: []
   - m_Id: 256742898106368
