@@ -151,6 +151,10 @@ MonoBehaviour:
     m_Key: ingame.itemdesc.requiredbridge
     m_Metadata:
       m_Items: []
+  - m_Id: 1320507190116352
+    m_Key: ui.pause.continue
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

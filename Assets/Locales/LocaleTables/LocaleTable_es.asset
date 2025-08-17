@@ -17,7 +17,166 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: fd92060c2df8b5c4a83e55b0b13c8e7c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 1126501810176
+    m_Localized: Inicio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1161784295424
+    m_Localized: Inicio (Contrarreloj)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207867113472
+    m_Localized: Salida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1335961157632
+    m_Localized: "Encuentra la manera de escapar del hotel tras un terremoto tocando
+      los accesorios en la pantalla.\n\nNo te pierdas los accesorios que pueden funcionar
+      como llaves de escape ni los que las incluyen.\n\nTodos los accesorios funcionan
+      FUERA del inventario.\nAs\xED que debes soltarlos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1686273622016
+    m_Localized: "ADVERTENCIA:\n\nEl modo contrarreloj tiene un l\xEDmite de tiempo.
+      Debes escapar del hotel antes de que se agote el tiempo l\xEDmite; de lo contrario,
+      se considerar\xE1 un fracaso.\n\nEl l\xEDmite de tiempo se aplica despu\xE9s
+      del tutorial."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1841588699136
+    m_Localized: "Son trabajadores de un hotel.\r\n\r\nHan estado trabajando sin
+      descanso para inspeccionar el hotel. Sin embargo, tras el terremoto y la evacuaci\xF3n
+      de todos los hu\xE9spedes y trabajadores, el jefe ha cerrado el hotel. Sin
+      evaluar su situaci\xF3n de supervivencia, han abandonado la b\xFAsqueda de
+      supervivientes.\r\n\r\nAhora deben escapar del hotel ahora mismo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1946186252288
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2150805372928
+    m_Localized: 'Z-Recoger
+
+      X-Desplegar
+
+      C-Interactuar'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3613203988480
+    m_Localized: "\xA1Aclarado!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 212568177999872
+    m_Localized: "\xA1Felicitaciones!\r\n\r\nA pesar del fuerte terremoto, lograste
+      escapar con vida del hotel, a pesar de las escasas posibilidades de supervivencia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221330062278656
+    m_Localized: "Duraci\xF3n del claro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221446412271616
+    m_Localized: Fallar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221600578109440
+    m_Localized: "La base del hotel se derrumb\xF3 repentinamente.\r\n\r\nEst\xE1s
+      muerto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221747051593728
+    m_Localized: Reanudar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228106300129280
+    m_Localized: Oficina de guardia / Pasillo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228180623196160
+    m_Localized: Banquetes / Cocina
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228220926263296
+    m_Localized: "M\xE1quinas / Almacenamiento"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228258125545472
+    m_Localized: Estacionamiento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256742898106368
+    m_Localized: Puedes cruzar el pozo con este objeto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256880454500352
+    m_Localized: "De acuerdo con la Ley de Normas de Constru\xE7\xE3o de Constru\xE7\xF5es,
+      este edificio est\xE1 equipado con una l\xEDnea descendente. Permite descender
+      de un edificio en caso de incendio. Verifique la localizaci\xF3n del adaptador
+      de l\xEDnea descendente para seguridad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 258467977592832
+    m_Localized: Instalado uma linha desendente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 294848019922944
+    m_Localized: "L\xEDnea descendente. Piensa d\xF3nde colocar este accesorio."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303570771345408
+    m_Localized: Palanca. Se usa para romper algo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 304326211633152
+    m_Localized: "Esta zona est\xE1 bloqueada por algunas alturas. Busca accesorios
+      para subir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 304793012502528
+    m_Localized: "Nitr\xF3geno l\xEDquido. Parece eficaz para destruir objetos por
+      congelaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 313857574535168
+    m_Localized: "Nitr\xF3geno l\xEDquido, PRECAUCI\xD3N AL MANIPULARLO\n\nSi se
+      manipula incorrectamente, puede congelar otros objetos, debilit\xE1ndolos gravemente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323446676226048
+    m_Localized: Algo impide que la puerta se abra correctamente. Necesitas desmontarla.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327057900666880
+    m_Localized: "La puerta se congel\xF3. Rompe la puerta con objetos afilados."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369688609390592
+    m_Localized: Escalera. Se usa para cruzar el pozo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382412684886016
+    m_Localized: "\xA1El cable se da\xF1\xF3! Busca la manera de cortar la electricidad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382862767259648
+    m_Localized: "Se cort\xF3 la electricidad de las instalaciones."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386544577642496
+    m_Localized: "Hay obst\xE1culos enfrente. Necesito algo para cruzarlo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619299261480960
+    m_Localized: No puedo pasar. Necesito algo para atravesar el agua contaminada.
+      Piensa en los muebles que has pasado.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1320507190116352
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

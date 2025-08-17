@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     // Control
     private float inputX, inputY;
-    internal bool isCollect, isInteraction, isDrop;
+    internal bool isCollect, isInteraction, isDrop, isPause;
 
     [Header("Player Specifications")]
     [SerializeField] float moveSpeed = 4f;
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     internal void DoPlayerAction()
     {
-        if(GameManager.instance.playStatus != 0)
+        if (GameManager.instance.playStatus != 0)
         {
             // Get input
             GetInput();
@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
             Collect();
             Interaction();
             Drop();
+
+            PauseUsage();
         }
     }
 
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour
         isCollect = Input.GetButtonDown("Collect");
         isInteraction = Input.GetButtonDown("Action");
         isDrop = Input.GetButtonDown("Drop");
+        isPause = Input.GetButtonDown("Cancel");
     }
 
     void Move()
@@ -65,21 +68,22 @@ public class PlayerController : MonoBehaviour
 
     void Collect()
     {
-        if(isCollect && (objectNear.Count >= 1)) // If player pressed isCollect and there are more than 1 object
+        if (isCollect && (objectNear.Count >= 1)) // If player pressed isCollect and there are more than 1 object
         {
-            if(objectNear[0] == null) // If object is null
+            if (objectNear[0] == null) // If object is null
             {
                 //Debug.LogError("Index of list is not having objects");
                 objectNear.RemoveAt(0);
             }
             else
             {
-                if(objectOwnedLen < gameObject.transform.childCount + 0)
+                if (objectOwnedLen < gameObject.transform.childCount + 0)
                 // If current collectibles count is not bigger limits of owning collectibles
                 {
                     Debug.LogWarning("Player have reached the limits of owning objects");
                 }
-                else{
+                else
+                {
                     objectNear[0].GetComponent<Collectible>().BePickUp(gameObject);
                     //objectNear.RemoveAt(0);
                 }
@@ -92,13 +96,13 @@ public class PlayerController : MonoBehaviour
 
     void Interaction()
     {
-        if(isInteraction)
+        if (isInteraction)
         {
-            if(interactiveZone)
+            if (interactiveZone)
             {
                 interactiveZone.DoInteractionCheckout();
             }
-            else if(objectNear.Count > 0)
+            else if (objectNear.Count > 0)
             {
                 if (objectNear[^1]) objectNear[^1].GetComponent<Collectible>().BeInteraction();
             }
@@ -107,7 +111,7 @@ public class PlayerController : MonoBehaviour
 
     void Drop()
     {
-        if(isDrop && (objectOwnedOffset < transform.childCount))
+        if (isDrop && (objectOwnedOffset < transform.childCount))
         {
             // Set collectible which will be dropped
             Transform collectibleTarget = transform.GetChild(transform.childCount - 1);
@@ -124,13 +128,13 @@ public class PlayerController : MonoBehaviour
     // Adds Item when they got into trigger
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(true)
+        if (true)
         {
-            if(collision.CompareTag("Collectible"))
+            if (collision.CompareTag("Collectible"))
             {
                 objectNear.Add(collision.gameObject);
             }
-            else if(collision.CompareTag("Interactive"))
+            else if (collision.CompareTag("Interactive"))
             {
                 interactiveZone = collision.GetComponent<InteractiveZone>();
             }
@@ -140,18 +144,26 @@ public class PlayerController : MonoBehaviour
     // Removes Item when they got out of trigger
     void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Collectible"))
+        if (collision.CompareTag("Collectible"))
         {
             objectNear.Remove(collision.gameObject);
             // Also reset Memo UI
-            if(collision.GetComponent<MemoToggle>())
+            if (collision.GetComponent<MemoToggle>())
             {
                 GameManager.instance.ResetMemoText();
             }
         }
-        else if(collision.CompareTag("Interactive"))
+        else if (collision.CompareTag("Interactive"))
         {
             interactiveZone = null;
+        }
+    }
+    
+    void PauseUsage()
+    {
+        if (isPause && GameManager.instance.playStatus != 0)
+        {
+            GameManager.instance.UsePause();
         }
     }
 }

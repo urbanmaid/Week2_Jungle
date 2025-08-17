@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] internal int playStatus = 0;
     [SerializeField] private bool hasTimeLimit;
+    Coroutine currentCo;
 
+    public bool isPlaying = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     public void SetTimeLimitStart()
     {
-        if(hasTimeLimit)
+        if (hasTimeLimit)
         {
             uiManager.ShowTimeLimit();
             second = 0;
@@ -47,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     void InspectComponentsReady()
     {
-        if(player == null)
+        if (player == null)
         {
             Debug.LogError("PlayerController(Player) is Missing");
         }
@@ -55,12 +57,12 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CheckSecond()
     {
-        while(playStatus != 0)
+        while (playStatus != 0)
         {
             yield return new WaitForSeconds(1f);
             second++;
             UpdateRemainedTime();
-            if((second > secondGameOver) && hasTimeLimit)
+            if ((second > secondGameOver) && hasTimeLimit)
             {
                 Debug.LogError("Game Over!");
                 playStatus = 0;
@@ -96,7 +98,7 @@ public class GameManager : MonoBehaviour
     {
         uiManager.ResetMemoText();
     }
-    
+
     public void ShowMemoText(string contentString)
     {
         uiManager.ShowMemoText(contentString);
@@ -108,13 +110,20 @@ public class GameManager : MonoBehaviour
 
     public void ShowMemoTextAsCaption(string contentString)
     {
-        uiManager.ShowMemoText(contentString);
-        Invoke(nameof(ResetMemoText), stageIntroDuration);
+        if (currentCo != null) StopCoroutine(currentCo);
+        currentCo = StartCoroutine(ShowMemoTextAsCaptionCo(contentString));
     }
     public void ShowMemoTextAsCaptionWithLocale(LocalizedString localizedString)
     {
-        uiManager.ShowMemoText(localizedString.GetLocalizedStringAsync().Result);
-        Invoke(nameof(ResetMemoText), stageIntroDuration);
+        if (currentCo != null) StopCoroutine(currentCo);
+        currentCo = StartCoroutine(ShowMemoTextAsCaptionCo(localizedString.GetLocalizedStringAsync().Result));
+    }
+    IEnumerator ShowMemoTextAsCaptionCo(string input)
+    {
+        uiManager.ShowMemoText(input);
+
+        yield return new WaitForSeconds(stageIntroDuration);
+        ResetMemoText();
     }
 
 
@@ -189,10 +198,28 @@ public class GameManager : MonoBehaviour
     }
     public void ExitGame()
     {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #else
-            Application.Quit();
-        #endif
+        Application.Quit();
+    }
+    
+
+    public void UsePause(int playing = 0)
+    {
+        // Set Pause Mode
+        if (playing == 1)
+        {
+            isPlaying = true;
+        }
+        else if (playing == -1)
+        {
+            isPlaying = false;
+        }
+        else
+        {
+            isPlaying = !isPlaying;
+        }
+
+        Time.timeScale = isPlaying ? 1f : 0f;
+
+        uiManager.SetPause(isPlaying);
     }
 }

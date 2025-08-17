@@ -35,9 +35,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1686273622016
-    m_Localized: "WARNING:\n\nTime trial mode has limits of \nplaying time. You need
-      to escape \nhotel before time  limit expires, \nor it is estimated as fail.\n\nTime
-      limit is applied after tutorial."
+    m_Localized: 'WARNING:
+
+
+      Time trial mode has limits of playing time. You
+      need to escape hotel before time  limit expires, or it is estimated as fail.
+
+
+      Time
+      limit is applied after tutorial.'
     m_Metadata:
       m_Items: []
   - m_Id: 1946186252288
@@ -53,10 +59,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1335961157632
-    m_Localized: "Find the way to escape hotel on a \ndamage of earthquake by touching
-      the\nprops around the screen.\n\nDon't miss props that can function as keys
-      to \nescape, or props that can include them.\n\nAll props works OUTSIDE of
-      inventory.\nSo you need to drop these down."
+    m_Localized: 'Find the way to escape hotel on a damage of earthquake by touching
+      the
+
+      props around the screen.
+
+
+      Don''t miss props that can function
+      as keys to escape, or props that can include them.
+
+
+      All props works
+      OUTSIDE of inventory. So you need to drop these down.'
     m_Metadata:
       m_Items: []
   - m_Id: 1841588699136
@@ -190,6 +204,10 @@ MonoBehaviour:
   - m_Id: 619299261480960
     m_Localized: Can't go over it. Need something to pass through the polluted water.
       Think about the furniture you have passed by.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1320507190116352
+    m_Localized: Continue
     m_Metadata:
       m_Items: []
   references:

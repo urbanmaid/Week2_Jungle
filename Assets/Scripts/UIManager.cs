@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    private float uiChangeDuration = 2.5f;
+    private readonly float uiChangeDuration = 3.5f;
 
     [Header("Ingame UI")]
     [SerializeField] GameObject remainedTimeUI;
@@ -41,6 +41,9 @@ public class UIManager : MonoBehaviour
 
     [Header("> Settings")]
     [SerializeField] TMP_Dropdown languageDropdown;
+
+    [Header("> Pause")]
+    [SerializeField] GameObject[] pauseScreen;
 
     void Start()
     {
@@ -224,5 +227,15 @@ public class UIManager : MonoBehaviour
         yield return LocalizationSettings.InitializationOperation;
 
         languageDropdown.interactable = true;
+    }
+
+    internal void SetPause(bool isPlaying)
+    {
+        if (pauseScreen.Length == 0) return;
+
+        for (int i = 0; i < pauseScreen.Length; i++)
+        {
+            if (pauseScreen[i] != null) pauseScreen[i].SetActive(!isPlaying);
+        }
     }
 }

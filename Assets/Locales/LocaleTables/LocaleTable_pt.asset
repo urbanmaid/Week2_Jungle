@@ -17,7 +17,167 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: fd92060c2df8b5c4a83e55b0b13c8e7c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 1126501810176
+    m_Localized: Iniciar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1161784295424
+    m_Localized: Iniciar (Julgamento temporal)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207867113472
+    m_Localized: "P\xE1ra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1335961157632
+    m_Localized: "Encontre a maneira de escapar do hotel em um dano de terremoto,
+      tocando os acess\xF3rios \xE0 volta do ecr\xE3.\n\nN\xE3o perca props que podem
+      funcionar como chaves para escapar, ou props que podem inclu\xED-los.\n\nTodos
+      os acess\xF3rios funcionam FORA do invent\xE1rio.Tens de largar isto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1686273622016
+    m_Localized: "ADVERTENZA:\r\n\r\nO modo de teste temporal tem limites de tempo
+      de jogo. Voc\xEA precisa escapar do hotel antes do limite de tempo expira,
+      ou \xE9 estimado como falha.\r\n\r\nO limite de tempo \xE9 aplicado ap\xF3s
+      o tutorial."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1841588699136
+    m_Localized: "Voc\xEAs s\xE3o trabalhadores do hotel.\r\n\r\nTem trabalhado 24
+      horas para inspeccionar o hotel. No entanto, ap\xF3s o terremoto atingiu e
+      evacuou todos os h\xF3spedes e trabalhadores do hotel, o chefe fechou o hotel.
+      Sem avaliar a sua situa\xE7\xE3o de sobreviv\xEAncia, abandonaram a busca de
+      sobreviventes.\r\n\r\nTens de fugir do hotel agora mesmo agora."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1946186252288
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2150805372928
+    m_Localized: 'Z-Apanhar
+
+      X-Baixa-te
+
+      C-Interactar'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3613203988480
+    m_Localized: Desimpedido!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 212568177999872
+    m_Localized: "Parab\xE9ns!\r\n\r\nApesar de um terramoto grave, conseguiste escapar
+      vivo do hotel, apesar das poucas hip\xF3teses de sobreviv\xEAncia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221330062278656
+    m_Localized: "Dura\xE7\xE3o de limpeza"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221446412271616
+    m_Localized: Falha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221600578109440
+    m_Localized: "A base do hotel foi mutilada de repente, e desmoronou.\r\n\r\nEst\xE1s
+      morto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221747051593728
+    m_Localized: Voltar a iniciar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228106300129280
+    m_Localized: "Gabinete de servi\xE7o / Hallway"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228180623196160
+    m_Localized: Banquetes / Cozinha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228220926263296
+    m_Localized: "M\xE1quinas / Armazenamento"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228258125545472
+    m_Localized: Estacionamento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256742898106368
+    m_Localized: "Voc\xEA pode atravessar o po\xE7o atrav\xE9s deste item."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256880454500352
+    m_Localized: "De acordo com a Lei de Normas de Constru\xE7\xE3o de Constru\xE7\xF5es,
+      este edif\xEDcio est\xE1 equipado com uma linha descendente. Permite descer
+      de um edif\xEDcio em caso de inc\xEAndio. Verifique a localiza\xE7\xE3o do
+      adaptador de linha descendente para seguran\xE7a."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 258467977592832
+    m_Localized: Instala uma linha desendente.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 294848019922944
+    m_Localized: "Desculpa a linha.Pensa onde colocar este propuls\xE3o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303570771345408
+    m_Localized: "Pistola de multid\xE3o. Costumava partir alguma coisa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 304326211633152
+    m_Localized: "Esta \xE1rea est\xE1 bloqueada com algumas alturas. Descubra os
+      acess\xF3rios para subir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 304793012502528
+    m_Localized: "Nitrogen l\xEDquido. Parece eficiente para destruir algo congelando."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 313857574535168
+    m_Localized: "Nitrog\xE9nio l\xEDquido, CAUT\xC3O EM MANDEL\r\n\r\nSe lidou mal,
+      pode congelar outro objecto, tornando-o severamente enfraquecedor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323446676226048
+    m_Localized: Algo impede que a porta se abra normalmente. Tens de derrubar a
+      porta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327057900666880
+    m_Localized: "A porta ficou congelada. Parte a porta com artif\xEDcio afiado."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369688609390592
+    m_Localized: "Escada. Usado para atravessar o po\xE7o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382412684886016
+    m_Localized: "H\xE1 um dano de electricidade com o fio! Encontra uma maneira
+      de cortar a energia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382862767259648
+    m_Localized: "A electricidade das instala\xE7\xF5es foi cortada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386544577642496
+    m_Localized: "H\xE1 obst\xE1culos \xE0 frente. Preciso de um objecto para atravess\xE1-lo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 619299261480960
+    m_Localized: "N\xE3o posso passar por isso. Preciso de algo para passar pela
+      \xE1gua contaminada. Pensa nos m\xF3veis que passaste."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1320507190116352
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
