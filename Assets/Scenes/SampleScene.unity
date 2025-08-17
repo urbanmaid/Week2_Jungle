@@ -27495,9 +27495,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:fd92060c2df8b5c4a83e55b0b13c8e7c
+      m_TableCollectionName: 
     m_TableEntryReference:
-      m_KeyId: 1062253461504
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -27541,7 +27541,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v1.0 Project by Urbanmaid
+  m_text: 'v1.0
+
+    by Urbanmaid'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
   m_sharedMaterial: {fileID: -7081658477223619499, guid: 55b2d13beaedb414ea90f3b51051c926, type: 2}
