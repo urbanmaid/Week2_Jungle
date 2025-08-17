@@ -179,6 +179,10 @@ MonoBehaviour:
     m_Localized: Continuer
     m_Metadata:
       m_Items: []
+  - m_Id: 1062253461504
+    m_Localized: "Survie de l'h\xF4tel Miranda"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
