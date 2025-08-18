@@ -182,6 +182,18 @@ MonoBehaviour:
     m_Localized: "Sobreviv\xEAncia no hotel Miranda"
     m_Metadata:
       m_Items: []
+  - m_Id: 1504980422721536
+    m_Localized: Mando de Gamepad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1504554348544000
+    m_Localized: 'A-Apanhar
+
+      B-Baixa-te
+
+      X-Interactar'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

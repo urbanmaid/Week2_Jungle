@@ -41,6 +41,9 @@ public class UIManager : MonoBehaviour
 
     [Header("> Settings")]
     [SerializeField] TMP_Dropdown languageDropdown;
+    [SerializeField] Toggle joystickToggle;
+    [SerializeField] GameObject controlTipKeyboard;
+    [SerializeField] GameObject controlTipJoystick;
 
     [Header("> Pause")]
     [SerializeField] GameObject[] pauseScreen;
@@ -48,7 +51,10 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         if (languageDropdown != null) StartCoroutine(SetupLocalesRoutine());
+        if (joystickToggle != null) AddJoystickToggle();
     }
+
+    #region Item inventory
 
     // Item UI Manangement
     internal void UpdateItemList()
@@ -104,6 +110,9 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    #endregion
+    #region Time Limits
+
     // Time Limits
     internal void ShowTimeLimit()
     {
@@ -113,6 +122,9 @@ public class UIManager : MonoBehaviour
     {
         remainedTimeText.text = value + "";
     }
+
+    #endregion
+    #region Memo Text
 
     // Memo Text
     internal void ShowMemoText(string contentString)
@@ -137,6 +149,9 @@ public class UIManager : MonoBehaviour
         memoContentText.text = "";
     }
 
+    #endregion
+    #region Explosive FX
+
     // Explosive FX
     internal void ShowExplosive()
     {
@@ -146,6 +161,9 @@ public class UIManager : MonoBehaviour
     {
         explosiveFxBg.SetActive(false);
     }
+
+    #endregion
+    #region Complete
 
     // Game Over
     internal void ShowGameOverBG()
@@ -212,6 +230,9 @@ public class UIManager : MonoBehaviour
         languageDropdown.onValueChanged.AddListener(SetLanguage);
     }
 
+    #endregion
+    #region Settings and pause
+
     public void SetLanguage(int index)
     {
         StartCoroutine(SetLocaleRoutine(index));
@@ -238,4 +259,17 @@ public class UIManager : MonoBehaviour
             if (pauseScreen[i] != null) pauseScreen[i].SetActive(!isPlaying);
         }
     }
+
+    private void AddJoystickToggle()
+    {
+        joystickToggle.onValueChanged.AddListener(SetJoystickUsage);
+    }
+
+    private void SetJoystickUsage(bool value)
+    {
+        controlTipJoystick.SetActive(value);
+        controlTipKeyboard.SetActive(!value);
+    }
+
+    #endregion
 }

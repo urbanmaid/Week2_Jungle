@@ -183,6 +183,14 @@ MonoBehaviour:
     m_Localized: "Survie de l'h\xF4tel Miranda"
     m_Metadata:
       m_Items: []
+  - m_Id: 1504980422721536
+    m_Localized: Utiliser le Gamepad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1504554348544000
+    m_Localized: "A-D\xE9croche\nB-Propulseur \nX-Interagir"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

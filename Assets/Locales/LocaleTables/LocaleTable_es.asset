@@ -181,6 +181,18 @@ MonoBehaviour:
     m_Localized: Supervivencia del hotel miranda
     m_Metadata:
       m_Items: []
+  - m_Id: 1504980422721536
+    m_Localized: Controle de Gamepad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1504554348544000
+    m_Localized: 'A-Recoger
+
+      B-Desplegar
+
+      X-Interactuar'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

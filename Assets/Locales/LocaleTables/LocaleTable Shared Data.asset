@@ -51,6 +51,10 @@ MonoBehaviour:
     m_Key: ui.ingame.control
     m_Metadata:
       m_Items: []
+  - m_Id: 1504554348544000
+    m_Key: ui.startscreen.playtipjoystick
+    m_Metadata:
+      m_Items: []
   - m_Id: 3613203988480
     m_Key: ui.complete.title
     m_Metadata:
@@ -153,6 +157,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1320507190116352
     m_Key: ui.pause.continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1504980422721536
+    m_Key: ui.startscreen.playtipjoystick.using
     m_Metadata:
       m_Items: []
   m_Metadata:

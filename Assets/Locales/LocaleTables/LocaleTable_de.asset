@@ -184,6 +184,18 @@ MonoBehaviour:
     m_Localized: "\xDCberleben im Miranda Hotel"
     m_Metadata:
       m_Items: []
+  - m_Id: 1504980422721536
+    m_Localized: Mit Gamepad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1504554348544000
+    m_Localized: 'A-Pick Up
+
+      B-Drop Down
+
+      X-Interaktion'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
